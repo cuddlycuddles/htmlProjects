@@ -1,0 +1,17 @@
+html body {
+	background-color: #0080FF;
+}
+button {
+	text-align: center !important;
+}
+.centered {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 20em;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+.hidden {
+	visibility: hidden;
+}
