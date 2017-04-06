@@ -41,26 +41,43 @@ $(function() {
 		$desu.addClass("btn btn-default btn-block hidden"); // adding some classes :3
 		$listGroup.after($desu); // add it to the page but it is hidden :p
 
+		var reload = document.createElement('button');
+		$reload = $(reload);
+		$reload.addClass("btn btn-default btn-block hidden"); // adding some classes :3
+		$reload.text("Click to restart desus!");
+		$desu.after($reload);
+
 		// game
 		$buttons.on('click', function(e) {
 			$(this).slideUp();
 			$buttons.each(function() {
 				$(this).attr("disabled", "disabled"); // remove functionality :3
 			});
+			$desuButton = $("#" + random);
 			if (e.target.id == random) { // if tey clik teh right button :3
 				$('html body').css('background-color','#00CC66');
 				$desu.text("You won! Click to play again!");
 			} else {
 				$('html body').css('background-color', '#FF3232');
+				$desuButton.fadeOut().fadeIn();
 				$desu.text("You lost! Click to play again!");
 			}
 			$desu.fadeIn(1000).removeClass("hidden");
+			$reload.fadeIn(1000).removeClass("hidden");
 		});
 
-		// reload if user wants to play again :3
+		// restart game with same desu's :3
 		$desu.on('click', function() {
+			$buttons.remove();
+			$desu.remove();
+			$reload.remove();
+			$('html body').css('background-color', '#0080FF');
+			game(number);
+		});
+
+		$reload.on('click', function() {
 			location.reload();
-		})
+		});
 	}
 
 	$input.on('keyup', function(e) {
