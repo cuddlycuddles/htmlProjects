@@ -1,0 +1,68 @@
+/* default html elements */
+html body {
+    font-family: sans-serif;
+
+    background: #3f9897;
+}
+
+.wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 80%;
+    height: 80%;
+    padding: 30px;
+
+    transform: translate(-50%, -50%);
+    text-align: center;
+    vertical-align: center;
+
+    border-radius: 30px;
+    background: white;
+    box-shadow: 0px 40px 50px rgba(0, 0, 0, 0.2);
+}
+
+img {
+    position: relative;
+
+    display: inline-block;
+
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+.concealed {
+    visibility: hidden;
+}
+
+.win {
+    animation: spin 3s linear infinite;
+
+    border: 5px solid #0c6;
+}
+
+.lose {
+    border: 5px solid #f00;
+}
+
+.draw {
+    border: 5px solid #aaa;
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
