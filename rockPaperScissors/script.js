@@ -3,25 +3,29 @@ $(function() {
 
 	var computer = Math.floor(Math.random() * 3 + 1);
 
-	var computerImage = $('#' + computer).clone().attr('id', '4').addClass("concealed").appendTo(".wrap");
+	var computerImage = $('#' + computer).clone().attr('id', '4').addClass("concealed").appendTo(".center");
+	$('.placeholder').remove();
 
 	var img = $('img');
 
 	var button = $('button');
 
 	function win (userID, computerID) {
+		button.addClass("btn-outline-success");
 		$('#' + userID).addClass("win");
 		$('#' + computerID).addClass("lose");
 		$('h1').text("WIN");
 	}
 
 	function lose (userID, computerID) {
+		button.addClass("btn-outline-danger");
 		$('#' + userID).addClass("lose");
 		$('#' + computerID).addClass("win");
 		$('h1').text("LOSE");
 	}
 
 	function draw (userID, computerID) {
+		button.addClass("btn-outline-secondary");
 		img.addClass("draw");
 		$('h1').text("DRAW");
 	}
@@ -39,7 +43,7 @@ $(function() {
 	img.on('click', function() {
 		var user = $(this);
 		var userId = user.attr('id');
-		$('img').hide();
+		$('img').hide().addClass("noTouch")
 		user.fadeIn();
 		computerImage.fadeIn().removeClass("concealed");
 		showResults (userId, computer);
