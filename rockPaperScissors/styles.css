@@ -5,41 +5,55 @@ html body {
     background: #3f9897;
 }
 
+img {
+    position: relative;
+
+    display: inline-block;
+
+    width: 130px;
+    margin: 30px;
+
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+/* personal elements */
+
 .wrap {
     position: absolute;
     top: 50%;
     left: 50%;
 
     width: 80%;
-    height: 80%;
-    padding: 30px;
 
     transform: translate(-50%, -50%);
     text-align: center;
-    vertical-align: center;
 
     border-radius: 30px;
     background: white;
     box-shadow: 0px 40px 50px rgba(0, 0, 0, 0.2);
 }
 
-img {
-    position: relative;
+.center {
+    height: 100%;
+    margin: 0px;
 
-    display: inline-block;
-
-    width: 200px;
-    height: 200px;
-    margin: 20px;
-
-    border: 5px solid white;
-    border-radius: 50%;
+    vertical-align: middle;
 }
 
 .concealed {
     visibility: hidden;
 }
 
+.placeholder {
+    height: 190px;
+}
+
+.noTouch {
+    pointer-events: none;
+}
+
+/* game result */
 .win {
     animation: spin 3s linear infinite;
 
@@ -54,13 +68,10 @@ img {
     border: 5px solid #aaa;
 }
 
-
+/* keyframes */
 @keyframes spin {
     0% {
         transform: rotate(0);
-    }
-    50% {
-        transform: rotate(180deg);
     }
     100% {
         transform: rotate(360deg);
