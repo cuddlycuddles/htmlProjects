@@ -1,0 +1,83 @@
+body {
+  background: #0c6;
+}
+
+.main {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.wrap {
+  background: white;
+  border-radius: 50px;
+  padding: 10px;
+  margin: 10px;
+  overflow: hidden;
+}
+
+input {
+  display: block;
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: 100;
+  border-radius: 50px;
+  z-index: 0;
+  border: 1px solid #0c6;
+  background: white;
+  outline: none;
+  padding: 10px;
+  color: #0c6;
+  transition: background 300ms ease;
+}
+
+#userInput:focus, .button:hover {
+  background: #0c6;
+  color: white;
+  border: 1px solid #0c6;
+}
+
+::-webkit-input-placeholder { /* Chrome */
+  color: #0c6;
+  transition: opacity 600ms ease, transform 150ms ease;
+}
+
+:focus::-webkit-input-placeholder {
+  color: white;
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+  color: #0c6;
+  transition: opacity 600ms ease, transform 150ms ease;
+}
+
+:focus:-ms-input-placeholder {
+  color: white;
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+  color: #0c6;
+  transition: opacity 600ms ease, transform 150ms ease;
+}
+
+:focus::-moz-placeholder {
+  color: white;
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: #0c6;
+  transition: opacity 600ms ease, transform 150ms ease;
+}
+
+:focus:-moz-placeholder {
+  color: white;
+  opacity: 0;
+  transform: translateX(-100px);
+}
