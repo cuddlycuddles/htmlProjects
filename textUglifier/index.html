@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-	<div class="main">
-  <div class="wrap">
-    <input id="userInput" autofocus="autofocus" type="text" spellcheck="false" placeholder="text:"/>
-  </div>
-  <div class="wrap">
-    <input class="button" readonly value="Copy" data-clipboard-target="#userInput"/>
-  </div>
-</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="script.js">
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<div class="main">
+			<div class="wrap">
+				<input id="userInput" autofocus="autofocus" type="text" spellcheck="false" placeholder="text:"/>
+			</div>
+			<div class="wrap">
+				<input class="button" readonly value="Copy" data-clipboard-target="#userInput"/>
+			</div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="script.js"></script>
+	</body>
 </html>
