@@ -1,83 +1,99 @@
 body {
-  background: #0c6;
+    background: #0c6;
 }
 
 .main {
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
 }
 
 .wrap {
-  background: white;
-  border-radius: 50px;
-  padding: 10px;
-  margin: 10px;
-  overflow: hidden;
+    overflow: hidden;
+
+    margin: 10px;
+    padding: 10px;
+
+    border-radius: 50px;
+    background: white;
 }
 
 input {
-  display: block;
-  font-family: sans-serif;
-  text-align: center;
-  font-weight: 100;
-  border-radius: 50px;
-  z-index: 0;
-  border: 1px solid #0c6;
-  background: white;
-  outline: none;
-  padding: 10px;
-  color: #0c6;
-  transition: background 300ms ease;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+
+    display: block;
+
+    height: 2em;
+    padding: 10px;
+
+    transition: background 300ms ease;
+    text-align: center;
+
+    color: #0c6;
+    border: 1px solid #0c6;
+    border-radius: 50px;
+    outline: none;
+    background: white;
 }
 
 #userInput:focus, .button:hover {
-  background: #0c6;
-  color: white;
-  border: 1px solid #0c6;
+    color: white;
+    border: 1px solid #0c6;
+    background: #0c6;
 }
 
-::-webkit-input-placeholder { /* Chrome */
-  color: #0c6;
-  transition: opacity 600ms ease, transform 150ms ease;
+::-webkit-input-placeholder {
+    transition: opacity 600ms ease, transform 150ms ease;
+
+    color: #0c6;
 }
 
 :focus::-webkit-input-placeholder {
-  color: white;
-  opacity: 0;
-  transform: translateX(-100px);
+    transform: translateX(-100px);
+
+    opacity: 0;
+    color: white;
 }
 
-:-ms-input-placeholder { /* IE 10+ */
-  color: #0c6;
-  transition: opacity 600ms ease, transform 150ms ease;
+:-ms-input-placeholder {
+    transition: opacity 600ms ease, transform 150ms ease;
+
+    color: #0c6;
 }
 
 :focus:-ms-input-placeholder {
-  color: white;
-  opacity: 0;
-  transform: translateX(-100px);
+    transform: translateX(-100px);
+
+    opacity: 0;
+    color: white;
 }
 
-::-moz-placeholder { /* Firefox 19+ */
-  color: #0c6;
-  transition: opacity 600ms ease, transform 150ms ease;
+::-moz-placeholder {
+    transition: opacity 600ms ease, transform 150ms ease;
+
+    color: #0c6;
 }
 
 :focus::-moz-placeholder {
-  color: white;
-  opacity: 0;
-  transform: translateX(-100px);
+    transform: translateX(-100px);
+
+    opacity: 0;
+    color: white;
 }
 
-:-moz-placeholder { /* Firefox 4 - 18 */
-  color: #0c6;
-  transition: opacity 600ms ease, transform 150ms ease;
+:-moz-placeholder {
+    transition: opacity 600ms ease, transform 150ms ease;
+
+    color: #0c6;
 }
 
 :focus:-moz-placeholder {
-  color: white;
-  opacity: 0;
-  transform: translateX(-100px);
+    transform: translateX(-100px);
+
+    opacity: 0;
+    color: white;
 }
