@@ -38,7 +38,7 @@ var colorArray = [earth, fire, water];
 // current color accessor
 var colors = colorArray[0];
 
-function Circle(x, y, vx, vy, r) {
+function Circle(x, y, vx, vy, r, growth) {
 	this.x = x;
 	this.y = y;
 	this.vx = vx;
@@ -60,8 +60,8 @@ function Circle(x, y, vx, vy, r) {
 	this.update = function() {
 		this.x += this.vx;
 		this.y += this.vy;
-		this.alpha -= 0.02;
-		this.r -= 0.5;
+		this.alpha -= 0.015;
+		this.r += growth;
 		this.draw();
 	}
 }
@@ -85,6 +85,7 @@ window.addEventListener('mousemove', function(e) {
 window.addEventListener('click', function() {
 	colorArray.push(colorArray.shift());
 	colors = colorArray[0];
+	circles.push(new Circle(mouse.x, mouse.y, 0, 0, 10, 20));
 });
 
 // ensure canvas is always full size of browser window
@@ -100,7 +101,7 @@ function animate() {
 	var vx = (Math.random() - 0.5) * 5 + (Math.random() < 0.5 ? -2 : 2);
 	var vy = (Math.random() - 0.5) * 5 + (Math.random() < 0.5 ? -2 : 2);
 	var r = Math.random() * 20 + 30;
-	circles.push(new Circle(mouse.x, mouse.y, vx, vy, r));
+	circles.push(new Circle(mouse.x, mouse.y, vx, vy, r, -0.5));
 	
 	for (let i = 0; i < circles.length; ++i) {
 		circles[i].update();
