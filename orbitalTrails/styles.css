@@ -1,0 +1,96 @@
+body {
+    overflow: hidden;
+
+    margin: 0;
+
+    cursor: crosshair;
+
+    background: #000;
+}
+
+/* remove default blue outline on buttons */
+button:focus {
+    outline: 0;
+}
+
+#clear {
+    font-family: 'Helvetica Neue';
+    font-size: 14px;
+
+    position: absolute;
+
+    width: 100px;
+    height: 40px;
+    margin: 50px;
+    padding: 5px;
+
+    -webkit-animation: none;
+            animation: none;
+
+    color: white;
+    border: 3px solid white;
+    border-color: white;
+    border-color: currentColor;
+    border-radius: 10px;
+    background: transparent;
+}
+
+#clear:hover {
+    cursor: pointer;
+    -webkit-animation: rainbow 3s infinite linear;
+            animation: rainbow 3s infinite linear;
+}
+
+
+
+
+@-webkit-keyframes rainbow {
+    0%, 100% {
+        color: hsla(0, 100%, 50%, 1);
+    }
+    14% {
+        color: hsla(50, 100%, 50%, 1);
+    }
+    28% {
+        color: hsla(100, 100%, 50%, 1);
+    }
+    42% {
+        color: hsla(150, 100%, 50%, 1);
+    }
+    56% {
+        color: hsla(200, 100%, 50%, 1);
+    }
+    70% {
+        color: hsla(250, 100%, 50%, 1);
+    }
+    84% {
+        color: hsla(300, 100%, 50%, 1);
+    }
+}
+
+
+
+
+@keyframes rainbow {
+    0%, 100% {
+        color: hsla(0, 100%, 50%, 1);
+    }
+    14% {
+        color: hsla(50, 100%, 50%, 1);
+    }
+    28% {
+        color: hsla(100, 100%, 50%, 1);
+    }
+    42% {
+        color: hsla(150, 100%, 50%, 1);
+    }
+    56% {
+        color: hsla(200, 100%, 50%, 1);
+    }
+    70% {
+        color: hsla(250, 100%, 50%, 1);
+    }
+    84% {
+        color: hsla(300, 100%, 50%, 1);
+    }
+}
