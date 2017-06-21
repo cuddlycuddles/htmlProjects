@@ -24,6 +24,7 @@ button:focus {
     margin: 50px;
     padding: 5px;
 
+    user-select: none;
     -webkit-animation: none;
             animation: none;
 
@@ -40,9 +41,6 @@ button:focus {
     -webkit-animation: rainbow 3s infinite linear;
             animation: rainbow 3s infinite linear;
 }
-
-
-
 
 @-webkit-keyframes rainbow {
     0%, 100% {
@@ -67,9 +65,6 @@ button:focus {
         color: hsla(300, 100%, 50%, 1);
     }
 }
-
-
-
 
 @keyframes rainbow {
     0%, 100% {
